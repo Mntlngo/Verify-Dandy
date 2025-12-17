@@ -65,11 +65,25 @@ body {
 
     <img src="Dandy x Tombochio.jfif" class="cap-img" alt="Dandy Hat">
 
-    <div class="scan-text">TOTAL SCAN COUNT :</div>
-    <div class="scan-count">4 SCANS</div>
+   <div class="scan-text">TOTAL SCAN COUNT :</div>
+<div class="scan-count" id="scanCount">0 SCANS</div>
 
     <button class="verify-btn">VERIFY</button>
 
   </div>
+<script>
+let scans = localStorage.getItem("dandyScans");
+
+if (!scans) {
+  scans = 1;
+} else {
+  scans = parseInt(scans) + 1;
+}
+
+localStorage.setItem("dandyScans", scans);
+
+document.getElementById("scanCount").innerText = scans + " SCANS";
+</script>
+
 </body>
 </html>
