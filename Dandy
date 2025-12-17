@@ -63,14 +63,18 @@ body {
     <div class="logo">AUTHENTIC</div>
     <div class="sub">DANDY x TOMBOCHIO</div>
 
-    <img src="Dandy x Tombochio.jfif" class="cap-img" alt="Dandy Hat">
+    <img src="dandy-tombochio.jpg" class="cap-img" alt="Dandy Hat">
 
-   <div class="scan-text">TOTAL SCAN COUNT :</div>
-<div class="scan-count" id="scanCount">0 SCANS</div>
+    <div class="scan-text">TOTAL SCAN COUNT :</div>
+    <div class="scan-count" id="scanCount">0 SCANS</div>
 
-    <button class="verify-btn">VERIFY</button>
+    <button class="verify-btn"
+      onclick="alert('This Dandy x Tombochio hat is 100% authentic')">
+      VERIFY
+    </button>
 
   </div>
+
 <script>
 let scans = localStorage.getItem("dandyScans");
 
@@ -81,7 +85,6 @@ if (!scans) {
 }
 
 localStorage.setItem("dandyScans", scans);
-
 document.getElementById("scanCount").innerText = scans + " SCANS";
 </script>
 
